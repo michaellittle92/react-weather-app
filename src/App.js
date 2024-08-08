@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css';
 
 const App = () => {
   const [city, setCity] = useState('');
@@ -26,7 +27,8 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div class='parent'>
+    <div class='content'>
       <h1>Weather App</h1>
       <form onSubmit={fetchWeather}>
         <input
@@ -44,6 +46,7 @@ const App = () => {
           <p>{Math.round(weather.main.temp - 273.15)}°C</p>
         </div>
       )}
+    </div>
     </div>
   );
 };
